@@ -1,3 +1,4 @@
+//Data Source
 export const description_data = [{
     ID: 1,
     Date: "25/02/2023",
@@ -6,6 +7,7 @@ export const description_data = [{
     Line: 'MOD-C10',
     Shift: "Ca ngày",
     ProductOrder: '000020141337',
+    CopyProductOrder: '000020141337',//Set group
     Style: 'V01CG0061621-J5B_2503',
     SaleOrder: 'A160114569',
     Customer: 'Nike',
@@ -31,6 +33,7 @@ export const description_data = [{
     Line: 'MOD-C11',
     Shift: "Ca đêm",
     ProductOrder: '000020141337',
+    CopyProductOrder: '000020141337',//Set group
     Style: 'V01CG0061621-J5B_2503',
     SaleOrder: 'A160114569',
     Customer: 'Nike',
@@ -56,6 +59,7 @@ export const description_data = [{
     Line: 'MOD-C11',
     Shift: "Ca đêm",
     ProductOrder: '000020141337',
+    CopyProductOrder: '000020141337',//Set group
     Style: 'V01CG0061621-J5B_2503',
     SaleOrder: 'A160114569',
     Customer: 'Nike',
@@ -81,6 +85,7 @@ export const description_data = [{
     Line: 'MOD-C11',
     Shift: "Ca ngày",
     ProductOrder: '000020141337',
+    CopyProductOrder: '000020141337',//Set group
     Style: 'V01CG0061621-J5B_2503',
     SaleOrder: 'A160114569',
     Customer: 'Nike',
@@ -105,6 +110,7 @@ export const description_data = [{
     Line: 'MOD-C11',
     Shift: "Ca ngày",
     ProductOrder: '000020141456',
+    CopyProductOrder: '000020141456',//Set group
     Style: 'V01CG0061621-J5B_2503',
     SaleOrder: 'A160114569',
     Customer: 'Nike',
@@ -129,6 +135,7 @@ export const description_data = [{
         Line: 'MOD-C11',
         Shift: "Ca ngày",
         ProductOrder: '000020141456',
+        CopyProductOrder: '000020141456',//Set group
         Style: 'V01CG0061621-J5B_2503',
         SaleOrder: 'A160114569',
         Customer: 'Nike',
@@ -147,116 +154,124 @@ export const description_data = [{
         TimeToUse:'28/10/2022 9:30:00 AM',
 }];
 
+
+
+
+//Data Columns
 export const columns_data = [
   { 
       dataField: "Date",
-      caption: "Date",
+      caption: "时间 Thời gian",
       dataType: "date",
       width: 100,
   }, {
       dataField: "Factory",
-      caption: "Factory",
+      caption: "厂别 Nhà máy",
       width: 80,
   }, {
       dataField: "GarmentFactory",
-      caption: "GarmentFactory",
+      caption: "车间 Xưởng",
       width: 130,
   }, {
       dataField: "Line",
-      caption: "Line",
+      caption: "线别 Chuyền",
       width: 200,
   },
   {
       dataField: "Shift",
-      caption: "Shift",
+      caption: "班次 Ca làm việc",
       width: 80,
   },
   {
-    dataField: "ProductOrder",
-    caption: "ProductOrder",
+    dataField: "CopyProductOrder",
+    caption: "CopyProductOrder",
     name: "ProductGroup",
     visible: false,
     groupIndex: 0,//Set group Item 
   },
   {
       dataField: "ProductOrder",
-      caption: "ProductOrder",
+      caption: "制单号 Đơn sản xuất",
       width: 130,
   }, {
       dataField: "Style",
-      caption: "Style",
+      caption: "款号 Mã hàng",
   }, {
     dataField: "SaleOrder",
-    caption: "SaleOrder",
+    caption: "销售单号 SO",
     width: 120,
 }, {
     dataField: "Customer",
-    caption: "Customer",
+    caption: "客户 Khách hàng",
     width: 90,
 }, {
     dataField: "Application",
-    caption: "Application",
+    caption: "项目 Hạng mục ",
+    dateType: "number",
     width: 100,
 }, {
     dataField: "Color",
-    caption: "Color",
+    caption: "颜色 Màu sắc",
     width: 80,
 },
 {
     dataField: "DateOut",
-    caption: "DateOut",
+    caption: "出货日期 Ngày xuất hàng",
     dataType:"date",
     width: 80,
 },
 {
     dataField: "Measurment",
-    caption: "Measurment",
+    caption: "尺码 Kích cỡ",
     width: 100,
 }, {
     dataField: "QuantityOfOrder",
-    caption: "Qty Order",
+    caption: "订单数量 Số lượng đặt hàng",
+    dataType: "number",
     width: 100,
     dataType:"number",
 }, {
     dataField: "Increase",
-    caption: "Increase",
+    caption: "补数 Bù liệu ",
+    dateType: "number",
     width: 100,
-    dataType:"number",
 }, {
     dataField: "Cumulation",
-    caption: "Cumulation",
-    width: 100,
+    caption: "累计产量 Sản lượng tích lũy ",
     dataType:"number",
+    width: 100,
 }, {
     dataField: "QuantityOfLack",
-    caption: "Qty Lack",
-    width: 100,
+    caption: "定型欠数 Định hình thiếu",
     dataType:"number",
+    width: 100,
 }, {
     dataField: "QuantityAsShift",
-    caption: "Qty As Shift",
-    width: 100,
+    caption: "班次产量 Sản lượng theo ca ",
     dataType:"number",
+    width: 100,
 }, {
     dataField: "QuantityOfMachine",
-    caption: "Qty Machine",
+    caption: "定型机台号 Số máy định hình",
     width: 100,
-    dataType:"number",
 }, {
     dataField: "Note",
-    caption: "Note",
+    caption: "备注 Chú thích",
     width: 100,
 }, {
     dataField: "User",
-    caption: "User",
+    caption: "操作人员 Người thao tác",
     width: 120,
 }, {
     dataField: "TimeToUse",
-    caption: "TimeToUse",
-    width: 90,
+    caption: "操作时间 Thời gian thao tác",
     dataType:"date",
+    width: 90,
 }];
 
+
+
+//Data Summary
 export const summary_data = [
   {
       column: "QuantityOfOrder",
